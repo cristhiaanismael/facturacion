@@ -1,0 +1,58 @@
+ERROR - 2025-03-10 19:28:18 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+CRITICAL - 2025-03-10 19:28:18 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+in SYSTEMPATH\Database\BaseConnection.php on line 416.
+ 1 SYSTEMPATH\Database\BaseConnection.php(792): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\ExcelLector.php(68): CodeIgniter\Database\BaseConnection->transBegin()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\ExcelLector->exportar()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcelLector))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-10 20:43:22 --> syntax error, unexpected variable "$benchmark", expecting "function" or "const"
+in APPPATH\Controllers\ExcelLector.php on line 135.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\ExcelLector.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ExcelLector')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ExcelLector')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\ExcelLector', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-10 20:44:24 --> syntax error, unexpected variable "$benchmark", expecting ";" or "{"
+in APPPATH\Controllers\ExcelLector.php on line 136.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\ExcelLector.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ExcelLector')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ExcelLector')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\ExcelLector', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-10 20:44:41 --> Undefined array key "file"
+in APPPATH\Controllers\ExcelLector.php on line 139.
+ 1 APPPATH\Controllers\ExcelLector.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "file"', 'APPPATH\\Controllers\\ExcelLector.php', 139)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\ExcelLector->recibe()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcelLector))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-10 20:46:32 --> syntax error, unexpected token "class", expecting "function" or "const"
+in APPPATH\Controllers\ExcelLector.php on line 12.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\ExcelLector.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ExcelLector')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ExcelLector')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\ExcelLector', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-10 20:47:14 --> Undefined array key "file"
+in APPPATH\Controllers\ExcelLector.php on line 38.
+ 1 APPPATH\Controllers\ExcelLector.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "file"', 'APPPATH\\Controllers\\ExcelLector.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\ExcelLector->recibe()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcelLector))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-03-10 20:49:16 --> Undefined array key "file"
+in APPPATH\Controllers\ExcelLector.php on line 38.
+ 1 APPPATH\Controllers\ExcelLector.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "file"', 'APPPATH\\Controllers\\ExcelLector.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\ExcelLector->recibe()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ExcelLector))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

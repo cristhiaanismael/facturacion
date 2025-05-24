@@ -1,0 +1,140 @@
+CRITICAL - 2025-02-20 18:37:34 --> Undefined array key "foto"
+in APPPATH\Views\Gafete_view.php on line 133.
+ 1 APPPATH\Views\Gafete_view.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "foto"', 'APPPATH\\Views\\Gafete_view.php', 133)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gafete_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Gafete_view', [], true)
+ 5 APPPATH\Controllers\Qr.php(502): view('Gafete_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->gafete()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-20 18:40:38 --> Undefined array key "foto"
+in APPPATH\Views\Gafete_view.php on line 133.
+ 1 APPPATH\Views\Gafete_view.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "foto"', 'APPPATH\\Views\\Gafete_view.php', 133)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gafete_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Gafete_view', [], true)
+ 5 APPPATH\Controllers\Qr.php(539): view('Gafete_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->gafetes()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-20 18:43:39 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 907.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(789): CodeIgniter\Database\BaseBuilder->_whereIn('id_usuario', 'seleccionado[]=1', false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->whereIn('id_usuario', 'seleccionado[]=1')
+ 3 APPPATH\Models\UserModel.php(59): CodeIgniter\Model->__call('whereIn', [...])
+ 4 APPPATH\Controllers\Qr.php(510): App\Models\UserModel->readByIdIn('seleccionado[]=1')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->gafetes()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-20 18:47:48 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img`, `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `qr`.`id_usuario` IN :qr.id_usuario:
+AND `qr`.`activo` = :qr.activo:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(86): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Debug\Toolbar\Collectors\Database::collect(Object(CodeIgniter\Database\Query))
+ 7 SYSTEMPATH\Database\BaseConnection.php(639): CodeIgniter\Events\Events::trigger('DBQuery', Object(CodeIgniter\Database\Query))
+ 8 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img`, `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `qr`.`id_usuario` IN :qr.id_usuario:
+AND `qr`.`activo` = :qr.activo:', [...], false)
+ 9 APPPATH\Models\Catqr_model.php(84): CodeIgniter\Database\BaseBuilder->get()
+10 APPPATH\Controllers\Qr.php(515): App\Models\Catqr_model->getById([...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->gafetes()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-02-20 18:48:41 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img`, `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `qr`.`id_usuario` IN :qr.id_usuario:
+AND `qr`.`activo` = :qr.activo:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(86): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Debug\Toolbar\Collectors\Database::collect(Object(CodeIgniter\Database\Query))
+ 7 SYSTEMPATH\Database\BaseConnection.php(639): CodeIgniter\Events\Events::trigger('DBQuery', Object(CodeIgniter\Database\Query))
+ 8 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img`, `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `qr`.`id_usuario` IN :qr.id_usuario:
+AND `qr`.`activo` = :qr.activo:', [...], false)
+ 9 APPPATH\Models\Catqr_model.php(84): CodeIgniter\Database\BaseBuilder->get()
+10 APPPATH\Controllers\Qr.php(515): App\Models\Catqr_model->getById([...])
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->gafetes()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-20 18:56:31 --> Column 'id_usuario' in where clause is ambiguous
+CRITICAL - 2025-02-20 18:56:31 --> Column 'id_usuario' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `usuarios`
+JOIN `cat_qr` ON `cat_qr`.`id_usuario` = `nombre_de_la_tabla_principal`.`id_usuario`
+WHERE `id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `cat_qr`.`activo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios`
+JOIN `cat_qr` ON `cat_qr`.`id_usuario` = `nombre_de_la_tabla_principal`.`id_usuario`
+WHERE `id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `cat_qr`.`activo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios`
+JOIN `cat_qr` ON `cat_qr`.`id_usuario` = `nombre_de_la_tabla_principal`.`id_usuario`
+WHERE `id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `cat_qr`.`activo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+JOIN `cat_qr` ON `cat_qr`.`id_usuario` = `nombre_de_la_tabla_principal`.`id_usuario`
+WHERE `id_usuario` IN :id_usuario:
+AND `cat_qr`.`activo` = :cat_qr.activo:', [...], false)
+ 5 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\UserModel.php(63): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\Qr.php(512): App\Models\UserModel->readByIdIn([...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->gafetes()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-02-20 18:56:58 --> Column 'id_usuario' in where clause is ambiguous
+CRITICAL - 2025-02-20 18:56:58 --> Column 'id_usuario' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `usuarios`
+JOIN `cat_qr` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `cat_qr`.`activo` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios`
+JOIN `cat_qr` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `cat_qr`.`activo` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios`
+JOIN `cat_qr` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `cat_qr`.`activo` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+JOIN `cat_qr` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `id_usuario` IN :id_usuario:
+AND `cat_qr`.`activo` = :cat_qr.activo:', [...], false)
+ 5 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\UserModel.php(63): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\Qr.php(512): App\Models\UserModel->readByIdIn([...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->gafetes()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

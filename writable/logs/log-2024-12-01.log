@@ -1,0 +1,164 @@
+CRITICAL - 2024-12-01 22:10:30 --> Array to string conversion
+in APPPATH\Controllers\Qr.php on line 127.
+ 1 APPPATH\Controllers\Qr.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Qr.php', 127)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->scanner()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-01 22:10:38 --> Array to string conversion
+in APPPATH\Controllers\Qr.php on line 127.
+ 1 APPPATH\Controllers\Qr.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Qr.php', 127)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->scanner()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-01 22:10:44 --> Array to string conversion
+in APPPATH\Controllers\Qr.php on line 127.
+ 1 APPPATH\Controllers\Qr.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Qr.php', 127)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->scanner()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-01 22:11:06 --> Undefined property: stdClass::$tipe
+in APPPATH\Controllers\Qr.php on line 127.
+ 1 APPPATH\Controllers\Qr.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tipe', 'APPPATH\\Controllers\\Qr.php', 127)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->scanner()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-01 22:58:03 --> Unknown column 'usuarios.apellido_paterno' in 'field list'
+CRITICAL - 2024-12-01 22:58:03 --> Unknown column 'usuarios.apellido_paterno' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `logs_scanner`.*, `cat_qr`.*, `usuarios`.`nombre`, `usuarios`.`apellido_paterno`
+FROM `logs_scanner`
+JOIN (SELECT `id_qr`, MAX(date_scanner) as last_date
+FROM `logs_scanner`
+GROUP BY `id_qr`) as latest ON `logs_scanner`.`id_qr` = `latest`.`id_qr` AND `logs_scanner`.`date_scanner` = `latest`.`last_date`
+INNER JOIN `cat_qr` ON `logs_scanner`.`id_qr` = `cat_qr`.`id_qr`
+INNER JOIN `usuarios` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `logs_scanner`.`type` = \'ENTRADA\'
+AND DATE(logs_scanner.date_scanner) = \'2024-12-01\'
+AND `logs_scanner`.`id_qr` NOT IN (SELECT `id_qr` FROM `logs_scanner` WHERE `type` = \'SALIDA\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `logs_scanner`.*, `cat_qr`.*, `usuarios`.`nombre`, `usuarios`.`apellido_paterno`
+FROM `logs_scanner`
+JOIN (SELECT `id_qr`, MAX(date_scanner) as last_date
+FROM `logs_scanner`
+GROUP BY `id_qr`) as latest ON `logs_scanner`.`id_qr` = `latest`.`id_qr` AND `logs_scanner`.`date_scanner` = `latest`.`last_date`
+INNER JOIN `cat_qr` ON `logs_scanner`.`id_qr` = `cat_qr`.`id_qr`
+INNER JOIN `usuarios` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `logs_scanner`.`type` = \'ENTRADA\'
+AND DATE(logs_scanner.date_scanner) = \'2024-12-01\'
+AND `logs_scanner`.`id_qr` NOT IN (SELECT `id_qr` FROM `logs_scanner` WHERE `type` = \'SALIDA\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `logs_scanner`.*, `cat_qr`.*, `usuarios`.`nombre`, `usuarios`.`apellido_paterno`
+FROM `logs_scanner`
+JOIN (SELECT `id_qr`, MAX(date_scanner) as last_date
+FROM `logs_scanner`
+GROUP BY `id_qr`) as latest ON `logs_scanner`.`id_qr` = `latest`.`id_qr` AND `logs_scanner`.`date_scanner` = `latest`.`last_date`
+INNER JOIN `cat_qr` ON `logs_scanner`.`id_qr` = `cat_qr`.`id_qr`
+INNER JOIN `usuarios` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `logs_scanner`.`type` = \'ENTRADA\'
+AND DATE(logs_scanner.date_scanner) = \'2024-12-01\'
+AND `logs_scanner`.`id_qr` NOT IN (SELECT `id_qr` FROM `logs_scanner` WHERE `type` = \'SALIDA\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `logs_scanner`.*, `cat_qr`.*, `usuarios`.`nombre`, `usuarios`.`apellido_paterno`
+FROM `logs_scanner`
+JOIN (SELECT `id_qr`, MAX(date_scanner) as last_date
+FROM `logs_scanner`
+GROUP BY `id_qr`) as latest ON `logs_scanner`.`id_qr` = `latest`.`id_qr` AND `logs_scanner`.`date_scanner` = `latest`.`last_date`
+INNER JOIN `cat_qr` ON `logs_scanner`.`id_qr` = `cat_qr`.`id_qr`
+INNER JOIN `usuarios` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `logs_scanner`.`type` = :logs_scanner.type:
+AND DATE(logs_scanner.date_scanner) = :DATE(logs_scanner.date_scanner):
+AND `logs_scanner`.`id_qr` NOT IN :logs_scanner.id_qr:', [...], false)
+ 5 APPPATH\Models\LogModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(20): App\Models\LogModel->getLogsForToday()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->aforo()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-01 22:58:44 --> Call to undefined method App\Controllers\Admin::respond()
+in APPPATH\Controllers\Admin.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->aforo()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-01 23:08:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '%Y-%m-%d') ) = '2024-12-01'
+AND `logs_scanner`.`id_qr` NOT IN (SELECT `id_qr` ' at line 9
+CRITICAL - 2024-12-01 23:08:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' '%Y-%m-%d') ) = '2024-12-01'
+AND `logs_scanner`.`id_qr` NOT IN (SELECT `id_qr` ' at line 9
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `logs_scanner`.*, `cat_qr`.*, `usuarios`.`nombre`, `usuarios`.`apellido_pat`
+FROM `logs_scanner`
+JOIN (SELECT `id_qr`, MAX(date_scanner) as last_date
+FROM `logs_scanner`
+GROUP BY `id_qr`) as latest ON `logs_scanner`.`id_qr` = `latest`.`id_qr` AND `logs_scanner`.`date_scanner` = `latest`.`last_date`
+INNER JOIN `cat_qr` ON `logs_scanner`.`id_qr` = `cat_qr`.`id_qr`
+INNER JOIN `usuarios` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `logs_scanner`.`type` = \'ENTRADA\'
+AND DATE(logs_scanner.date_scanner , \'%Y-%m-%d\') ) = \'2024-12-01\'
+AND `logs_scanner`.`id_qr` NOT IN (SELECT `id_qr` FROM `logs_scanner` WHERE `type` = \'SALIDA\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `logs_scanner`.*, `cat_qr`.*, `usuarios`.`nombre`, `usuarios`.`apellido_pat`
+FROM `logs_scanner`
+JOIN (SELECT `id_qr`, MAX(date_scanner) as last_date
+FROM `logs_scanner`
+GROUP BY `id_qr`) as latest ON `logs_scanner`.`id_qr` = `latest`.`id_qr` AND `logs_scanner`.`date_scanner` = `latest`.`last_date`
+INNER JOIN `cat_qr` ON `logs_scanner`.`id_qr` = `cat_qr`.`id_qr`
+INNER JOIN `usuarios` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `logs_scanner`.`type` = \'ENTRADA\'
+AND DATE(logs_scanner.date_scanner , \'%Y-%m-%d\') ) = \'2024-12-01\'
+AND `logs_scanner`.`id_qr` NOT IN (SELECT `id_qr` FROM `logs_scanner` WHERE `type` = \'SALIDA\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `logs_scanner`.*, `cat_qr`.*, `usuarios`.`nombre`, `usuarios`.`apellido_pat`
+FROM `logs_scanner`
+JOIN (SELECT `id_qr`, MAX(date_scanner) as last_date
+FROM `logs_scanner`
+GROUP BY `id_qr`) as latest ON `logs_scanner`.`id_qr` = `latest`.`id_qr` AND `logs_scanner`.`date_scanner` = `latest`.`last_date`
+INNER JOIN `cat_qr` ON `logs_scanner`.`id_qr` = `cat_qr`.`id_qr`
+INNER JOIN `usuarios` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `logs_scanner`.`type` = \'ENTRADA\'
+AND DATE(logs_scanner.date_scanner , \'%Y-%m-%d\') ) = \'2024-12-01\'
+AND `logs_scanner`.`id_qr` NOT IN (SELECT `id_qr` FROM `logs_scanner` WHERE `type` = \'SALIDA\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `logs_scanner`.*, `cat_qr`.*, `usuarios`.`nombre`, `usuarios`.`apellido_pat`
+FROM `logs_scanner`
+JOIN (SELECT `id_qr`, MAX(date_scanner) as last_date
+FROM `logs_scanner`
+GROUP BY `id_qr`) as latest ON `logs_scanner`.`id_qr` = `latest`.`id_qr` AND `logs_scanner`.`date_scanner` = `latest`.`last_date`
+INNER JOIN `cat_qr` ON `logs_scanner`.`id_qr` = `cat_qr`.`id_qr`
+INNER JOIN `usuarios` ON `cat_qr`.`id_usuario` = `usuarios`.`id_usuario`
+WHERE `logs_scanner`.`type` = :logs_scanner.type:
+AND DATE(logs_scanner.date_scanner , \'%Y-%m-%d\') ) = :DATE(logs_scanner.date_scanner , \'%Y-%m-%d\') ):
+AND `logs_scanner`.`id_qr` NOT IN :logs_scanner.id_qr:', [...], false)
+ 5 APPPATH\Models\LogModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(22): App\Models\LogModel->getLogsForToday()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->aforo()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-01 23:32:57 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::joinSubquery()
+in APPPATH\Models\LogModel.php on line 51.
+ 1 APPPATH\Controllers\Admin.php(22): App\Models\LogModel->getLogsForToday()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->aforo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-01 23:34:14 --> CodeIgniter\Database\BaseBuilder::join(): Argument #1 ($table) must be of type string, CodeIgniter\Database\MySQLi\Builder given, called in C:\xampp\htdocs\controlaccesos\app\Models\LogModel.php on line 51
+in SYSTEMPATH\Database\BaseBuilder.php on line 593.
+ 1 APPPATH\Models\LogModel.php(51): CodeIgniter\Database\BaseBuilder->join(Object(CodeIgniter\Database\MySQLi\Builder), 'latest', 'log.id_qr = latest.id_qr AND log.date_scanner = latest.last_date')
+ 2 APPPATH\Controllers\Admin.php(22): App\Models\LogModel->getLogsForToday()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->aforo()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-01 23:35:16 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Models\LogModel.php on line 54.
+ 1 APPPATH\Controllers\Admin.php(22): App\Models\LogModel->getLogsForToday()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->aforo()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-01 23:38:27 --> Undefined variable $db
+in APPPATH\Models\LogModel.php on line 74.
+ 1 APPPATH\Models\LogModel.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'APPPATH\\Models\\LogModel.php', 74)
+ 2 APPPATH\Controllers\Admin.php(22): App\Models\LogModel->getLogsForToday()
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->aforo()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

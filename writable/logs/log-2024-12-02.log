@@ -1,0 +1,789 @@
+ERROR - 2024-12-02 00:08:21 --> Table 'scai.log' doesn't exist
+CRITICAL - 2024-12-02 00:08:21 --> Table 'scai.log' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `log` (`id_qr`, `type`) VALUES (\'76\', \'ENTRADA\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `log` (`id_qr`, `type`) VALUES (\'76\', \'ENTRADA\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `log` (`id_qr`, `type`) VALUES (\'76\', \'ENTRADA\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `log` (`id_qr`, `type`) VALUES (:id_qr:, :type:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\LogModel.php(37): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Qr.php(89): App\Models\LogModel->create([...])
+10 APPPATH\Controllers\Qr.php(179): App\Controllers\Qr->registraLog('76', 'ENTRADA')
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->scanner()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-02 00:09:41 --> Table 'scai.log' doesn't exist
+CRITICAL - 2024-12-02 00:09:41 --> Table 'scai.log' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `log` (`id_qr`, `type`) VALUES (\'76\', \'ENTRADA\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `log` (`id_qr`, `type`) VALUES (\'76\', \'ENTRADA\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `log` (`id_qr`, `type`) VALUES (\'76\', \'ENTRADA\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `log` (`id_qr`, `type`) VALUES (:id_qr:, :type:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\LogModel.php(37): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Qr.php(89): App\Models\LogModel->create([...])
+10 APPPATH\Controllers\Qr.php(179): App\Controllers\Qr->registraLog('76', 'ENTRADA')
+11 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->scanner()
+12 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+13 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-02 00:10:41 --> strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated
+in APPPATH\Controllers\Qr.php on line 97.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated', 'APPPATH\\Controllers\\Qr.php', 97)
+ 2 APPPATH\Controllers\Qr.php(97): strtotime(null)
+ 3 APPPATH\Controllers\Qr.php(127): App\Controllers\Qr::convierteEntradaBySalida(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->scanner()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-02 01:50:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inner join cat_qr cat on
+        cat.id_qr=first_logs.id_qr
+        inner join' at line 33
+CRITICAL - 2024-12-02 01:50:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inner join cat_qr cat on
+        cat.id_qr=first_logs.id_qr
+        inner join' at line 33
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 
+        first_logs.id_qr,
+        first_logs.first_scan AS first_scan_time,
+        first_logs.first_type,
+        last_logs.last_scan AS last_scan_time,
+        last_logs.last_type,
+        
+     u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_us
+        FROM 
+            (SELECT 
+                id_qr, 
+                MIN(date_scanner) AS first_scan, 
+                type AS first_type
+            FROM logs_scanner
+            WHERE DATE(date_scanner) = \'2024-12-02\'
+            GROUP BY id_qr
+            ) AS first_logs
+        JOIN 
+            (SELECT 
+                id_qr, 
+                MAX(date_scanner) AS last_scan, 
+                type AS last_type
+            FROM logs_scanner
+            WHERE DATE(date_scanner) = \'2024-12-02\'
+            GROUP BY id_qr
+            ) AS last_logs
+        ON first_logs.id_qr = last_logs.id_qr;
+
+
+        
+        inner join cat_qr cat on
+        cat.id_qr=first_logs.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        first_logs.id_qr,
+        first_logs.first_scan AS first_scan_time,
+        first_logs.first_type,
+        last_logs.last_scan AS last_scan_time,
+        last_logs.last_type,
+        
+     u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_us
+        FROM 
+            (SELECT 
+                id_qr, 
+                MIN(date_scanner) AS first_scan, 
+                type AS first_type
+            FROM logs_scanner
+            WHERE DATE(date_scanner) = \'2024-12-02\'
+            GROUP BY id_qr
+            ) AS first_logs
+        JOIN 
+            (SELECT 
+                id_qr, 
+                MAX(date_scanner) AS last_scan, 
+                type AS last_type
+            FROM logs_scanner
+            WHERE DATE(date_scanner) = \'2024-12-02\'
+            GROUP BY id_qr
+            ) AS last_logs
+        ON first_logs.id_qr = last_logs.id_qr;
+
+
+        
+        inner join cat_qr cat on
+        cat.id_qr=first_logs.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        first_logs.id_qr,
+        first_logs.first_scan AS first_scan_time,
+        first_logs.first_type,
+        last_logs.last_scan AS last_scan_time,
+        last_logs.last_type,
+        
+     u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_us
+        FROM 
+            (SELECT 
+                id_qr, 
+                MIN(date_scanner) AS first_scan, 
+                type AS first_type
+            FROM logs_scanner
+            WHERE DATE(date_scanner) = \'2024-12-02\'
+            GROUP BY id_qr
+            ) AS first_logs
+        JOIN 
+            (SELECT 
+                id_qr, 
+                MAX(date_scanner) AS last_scan, 
+                type AS last_type
+            FROM logs_scanner
+            WHERE DATE(date_scanner) = \'2024-12-02\'
+            GROUP BY id_qr
+            ) AS last_logs
+        ON first_logs.id_qr = last_logs.id_qr;
+
+
+        
+        inner join cat_qr cat on
+        cat.id_qr=first_logs.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario')
+ 4 APPPATH\Models\LogModel.php(128): CodeIgniter\Database\BaseConnection->query('SELECT 
+        first_logs.id_qr,
+        first_logs.first_scan AS first_scan_time,
+        first_logs.first_type,
+        last_logs.last_scan AS last_scan_time,
+        last_logs.last_type,
+        
+     u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_us
+        FROM 
+            (SELECT 
+                id_qr, 
+                MIN(date_scanner) AS first_scan, 
+                type AS first_type
+            FROM logs_scanner
+            WHERE DATE(date_scanner) = \'2024-12-02\'
+            GROUP BY id_qr
+            ) AS first_logs
+        JOIN 
+            (SELECT 
+                id_qr, 
+                MAX(date_scanner) AS last_scan, 
+                type AS last_type
+            FROM logs_scanner
+            WHERE DATE(date_scanner) = \'2024-12-02\'
+            GROUP BY id_qr
+            ) AS last_logs
+        ON first_logs.id_qr = last_logs.id_qr;
+
+
+        
+        inner join cat_qr cat on
+        cat.id_qr=first_logs.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario')
+ 5 APPPATH\Controllers\Admin.php(48): App\Models\LogModel->resumen('2024-12-02')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->resumen()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-02 02:30:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuario' at line 26
+CRITICAL - 2024-12-02 02:30:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuario' at line 26
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 4 APPPATH\Models\LogModel.php(123): CodeIgniter\Database\BaseConnection->query('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 5 APPPATH\Controllers\Admin.php(48): App\Models\LogModel->resumen('2024-12-02')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->resumen()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-02 02:30:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuario' at line 26
+CRITICAL - 2024-12-02 02:30:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuario' at line 26
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 4 APPPATH\Models\LogModel.php(123): CodeIgniter\Database\BaseConnection->query('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 5 APPPATH\Controllers\Admin.php(48): App\Models\LogModel->resumen('2024-12-02')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->resumen()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-02 02:31:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuario' at line 27
+CRITICAL - 2024-12-02 02:31:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuario' at line 27
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 4 APPPATH\Models\LogModel.php(124): CodeIgniter\Database\BaseConnection->query('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+        
+        from logs_scanner ls where  
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 5 APPPATH\Controllers\Admin.php(48): App\Models\LogModel->resumen('2024-12-02')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->resumen()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-02 02:31:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATE(date_scanner)='2024-12-02'
+         group by ls.id_qr' at line 33
+CRITICAL - 2024-12-02 02:31:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATE(date_scanner)='2024-12-02'
+         group by ls.id_qr' at line 33
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+
+        from logs_scanner ls   
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+
+        from logs_scanner ls   
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+
+        from logs_scanner ls   
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 4 APPPATH\Models\LogModel.php(124): CodeIgniter\Database\BaseConnection->query('SELECT 
+                ls.id_qr, (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as first_scan_time,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner asc limit 1
+                )  as last_scan_time,
+                
+                (
+				select date_scanner from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1
+                )  as last_type,
+                
+                 (
+				select type from logs_scanner l1 where l1.id_qr=ls.id_qr 
+                and DATE(date_scanner)=\'2024-12-02\'  order by date_scanner desc limit 1 
+                )  as type_first,
+
+                 u.tipo_usuario, u.id_usuario, u.nombre,
+        apellido_pat, u.apellido_mat, u.matricula, u.programa, u.aquien_v,  
+        u.motivo, u.area, u.tipo_usuario, tipo.nombre as tipo_user
+
+        from logs_scanner ls   
+        inner join cat_qr cat on
+        cat.id_qr=ls.id_qr
+        inner join usuarios u
+        on u.id_usuario=cat.id_usuario
+        inner join tipos_usuario tipo
+        on tipo.idtipo_usuario=u.tipo_usuario
+        DATE(date_scanner)=\'2024-12-02\'
+         group by ls.id_qr')
+ 5 APPPATH\Controllers\Admin.php(48): App\Models\LogModel->resumen('2024-12-02')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->resumen()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

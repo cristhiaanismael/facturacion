@@ -1,0 +1,438 @@
+CRITICAL - 2024-11-27 17:36:29 --> Undefined variable $menu
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:37:24 --> Undefined variable $menu
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:38:46 --> Undefined variable $menu
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:38:49 --> Undefined variable $menu
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:40:39 --> Undefined variable $menu
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:40:40 --> Undefined variable $menu
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:42:56 --> Undefined variable $menu
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:43:22 --> Undefined variable $menu
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:43:33 --> Undefined variable $menu
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:43:42 --> Undefined variable $algo
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $algo', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:43:43 --> Undefined variable $algo
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $algo', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:44:24 --> Undefined variable $algo
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $algo', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:44:25 --> Undefined variable $algo
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $algo', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:44:32 --> Undefined variable $algo
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $algo', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:44:33 --> Undefined variable $algo
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $algo', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:44:33 --> Undefined variable $algo
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $algo', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:45:08 --> Undefined variable $algo
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $algo', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(16): view('Genera_view')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 17:47:39 --> Undefined variable $algo
+in APPPATH\Views\Genera_view.php on line 53.
+ 1 APPPATH\Views\Genera_view.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $algo', 'APPPATH\\Views\\Genera_view.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Genera_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Genera_view', [], true)
+ 5 APPPATH\Controllers\Genera.php(21): view('Genera_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Genera->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Genera))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 20:56:15 --> Call to undefined method App\Models\UserModel::getById
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Qr.php(237): CodeIgniter\Model->__call('getById', [...])
+ 2 APPPATH\Controllers\Qr.php(340): App\Controllers\Qr->create_zip([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 20:56:54 --> Undefined property: App\Controllers\Qr::$Catqr_model
+in APPPATH\Controllers\Qr.php on line 237.
+ 1 APPPATH\Controllers\Qr.php(237): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Qr::$Catqr_model', 'APPPATH\\Controllers\\Qr.php', 237)
+ 2 APPPATH\Controllers\Qr.php(340): App\Controllers\Qr->create_zip([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 20:57:10 --> Undefined variable $id_usuario
+in APPPATH\Models\Catqr_model.php on line 82.
+ 1 APPPATH\Models\Catqr_model.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_usuario', 'APPPATH\\Models\\Catqr_model.php', 82)
+ 2 APPPATH\Controllers\Qr.php(237): App\Models\Catqr_model->getById([...])
+ 3 APPPATH\Controllers\Qr.php(340): App\Controllers\Qr->create_zip([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 20:57:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`' at line 1
+CRITICAL - 2024-11-27 20:57:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN :us.id_usuario:
+AND `qr`.`activo` = :qr.activo:', [...], false)
+ 5 APPPATH\Models\Catqr_model.php(84): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Qr.php(237): App\Models\Catqr_model->getById([...])
+ 7 APPPATH\Controllers\Qr.php(340): App\Controllers\Qr->create_zip([...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 21:00:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`' at line 1
+CRITICAL - 2024-11-27 21:00:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN :us.id_usuario:
+AND `qr`.`activo` = :qr.activo:', [...], false)
+ 5 APPPATH\Models\Catqr_model.php(84): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Qr.php(237): App\Models\Catqr_model->getById([...])
+ 7 APPPATH\Controllers\Qr.php(340): App\Controllers\Qr->create_zip([...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 21:00:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`' at line 1
+CRITICAL - 2024-11-27 21:00:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`, `matricula`, `programa`, `identificador`, `aquien_v`, `proviene_de`, `motivo`, `n_empleado`, `area`, `puesto`, `tipo_usuario`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `us`.`id_usuario` IN :us.id_usuario:
+AND `qr`.`activo` = :qr.activo:', [...], false)
+ 5 APPPATH\Models\Catqr_model.php(84): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Qr.php(237): App\Models\Catqr_model->getById([...])
+ 7 APPPATH\Controllers\Qr.php(340): App\Controllers\Qr->create_zip([...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-11-27 21:03:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`
+FROM `cat_qr` `qr`
+JOIN ' at line 1
+CRITICAL - 2024-11-27 21:03:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`
+FROM `cat_qr` `qr`
+JOIN ' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `qr`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `qr`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `qr`.`id_usuario` IN (\'1\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\')
+AND `qr`.`activo` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `qr`.`id_qr` as `id_qr`, `qr`.`id_usuario` as `qr_id_usuario`, `activo`, `qr`.`img` `us`.`id_usuario`, `nombre`, `apellido_pat`, `apellido_mat`
+FROM `cat_qr` `qr`
+JOIN `usuarios` `us` ON `us`.`id_usuario`=`qr`.`id_usuario`
+WHERE `qr`.`id_usuario` IN :qr.id_usuario:
+AND `qr`.`activo` = :qr.activo:', [...], false)
+ 5 APPPATH\Models\Catqr_model.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Qr.php(237): App\Models\Catqr_model->getById([...])
+ 7 APPPATH\Controllers\Qr.php(340): App\Controllers\Qr->create_zip([...])
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 21:03:49 --> unlink(qrs_zip.zip): No such file or directory
+in APPPATH\Controllers\Qr.php on line 225.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(qrs_zip.zip): No such file or directory', 'APPPATH\\Controllers\\Qr.php', 225)
+ 2 APPPATH\Controllers\Qr.php(225): unlink('qrs_zip.zip')
+ 3 APPPATH\Controllers\Qr.php(239): App\Controllers\Qr->borra_zip('qrs_zip.zip')
+ 4 APPPATH\Controllers\Qr.php(340): App\Controllers\Qr->create_zip([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 21:06:02 --> Undefined variable $image_data
+in APPPATH\Controllers\Qr.php on line 252.
+ 1 APPPATH\Controllers\Qr.php(252): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $image_data', 'APPPATH\\Controllers\\Qr.php', 252)
+ 2 APPPATH\Controllers\Qr.php(346): App\Controllers\Qr->create_zip([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 21:08:53 --> count(): Argument #1 ($value) must be of type Countable|array, stdClass given
+in APPPATH\Controllers\Qr.php on line 251.
+ 1 APPPATH\Controllers\Qr.php(251): count(Object(stdClass))
+ 2 APPPATH\Controllers\Qr.php(351): App\Controllers\Qr->create_zip([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 21:48:46 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Controllers\Qr.php on line 351.
+ 1 APPPATH\Controllers\Qr.php(351): count(null)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 21:54:46 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\Qr.php on line 380.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Qr.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Qr')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Qr')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Qr', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 21:54:58 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\Qr.php on line 377.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Qr.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Qr')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Qr')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Qr', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 21:55:21 --> Class "App\Controllers\ZipArchive" not found
+in APPPATH\Controllers\Qr.php on line 269.
+ 1 APPPATH\Controllers\Qr.php(388): App\Controllers\Qr->create_zip([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 21:56:48 --> Class "App\Controllers\ZipArchive" not found
+in APPPATH\Controllers\Qr.php on line 275.
+ 1 APPPATH\Controllers\Qr.php(388): App\Controllers\Qr->create_zip([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:00:14 --> Class "App\Controllers\RecursiveIteratorIterator" not found
+in APPPATH\Controllers\Qr.php on line 278.
+ 1 APPPATH\Controllers\Qr.php(389): App\Controllers\Qr->create_zip([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:00:28 --> Class "App\Controllers\RecursiveIteratorIterator" not found
+in APPPATH\Controllers\Qr.php on line 278.
+ 1 APPPATH\Controllers\Qr.php(389): App\Controllers\Qr->create_zip([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:05:37 --> Call to undefined function App\Controllers\addFolderToZip()
+in APPPATH\Controllers\Qr.php on line 324.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-27 22:06:37 --> Object of class ZipArchive could not be converted to string
+in APPPATH\Controllers\Qr.php on line 324.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->createAll()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

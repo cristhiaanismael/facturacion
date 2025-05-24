@@ -1,0 +1,14 @@
+CRITICAL - 2024-11-22 13:21:24 --> Class "App\Controllers\QROptions" not found
+in APPPATH\Controllers\Qr.php on line 245.
+ 1 APPPATH\Controllers\Qr.php(294): App\Controllers\Qr->processCreate('100')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->create()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-22 13:22:15 --> Class "App\Controllers\QROptions" not found
+in APPPATH\Controllers\Qr.php on line 245.
+ 1 APPPATH\Controllers\Qr.php(294): App\Controllers\Qr->processCreate('101')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Qr->create()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Qr))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
