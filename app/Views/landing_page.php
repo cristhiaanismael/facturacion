@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('CSS/style.css') ?>">
 
 
   </head>
