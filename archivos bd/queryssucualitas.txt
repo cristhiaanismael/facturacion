@@ -1,0 +1,54 @@
+-- 1. Obtener cliente mediante RFC
+SELECT * 
+FROM clientes 
+WHERE rfc = '[RFC_DEL_CLIENTE]';
+
+-- 2. Obtener compra a través del folio de factura
+SELECT v.*, f.folio, f.fecha_emision, f.total AS total_facturado
+FROM ventas v
+JOIN facturas f ON v.id_venta = f.id_venta
+WHERE f.folio = '[FOLIO_DE_FACTURA]';
+
+-- 3. Obtener compra por folio, fecha y total
+SELECT v.*, f.folio, f.fecha_emision, f.total AS total_facturado
+FROM ventas v
+JOIN facturas f ON v.id_venta = f.id_venta
+WHERE f.folio = '[FOLIO_DE_FACTURA]'
+AND DATE(f.fecha_emision) = '[FECHA_EMISION]'
+AND f.total = [TOTAL];
+
+-- 4. Actualizar datos de usuario/cliente
+UPDATE clientes 
+SET nombre = '[NUEVO_NOMBRE]',
+    direccion = '[NUEVA_DIRECCION]',
+    telefono = '[NUEVO_TELEFONO]',
+    email = '[NUEVO_EMAIL]',
+    rfc = '[NUEVO_RFC]'
+WHERE id_cliente = [ID_CLIENTE];
+
+-- 5. Obtener venta facturada
+SELECT v.numero_ticket, v.fecha, v.total, 
+       f.folio, f.fecha_emision, f.estado,
+       c.nombre AS cliente,
+       s.nombre AS sucursal
+FROM ventas v
+JOIN facturas f ON v.id_venta = f.id_venta
+LEFT JOIN clientes c ON v.id_cliente = c.id_cliente
+JOIN sucursales s ON v.id_sucursal = s.id_sucursal
+WHERE f.estado = 'VALIDA'
+AND v.numero_ticket = '[NUMERO_TICKET]';
+
+-- 6. Validar número de ticket, cantidad y fecha para acceso al sistema
+SELECT 
+    v.numero_ticket,
+    v.fecha,
+    v.total,
+    COUNT(dv.id_detalle) AS cantidad_productos,
+    SUM(dv.cantidad) AS total_unidades,
+    CASE WHEN COUNT(dv.id_detalle) = [CANTIDAD_ESPERADA] 
+         AND DATE(v.fecha) = '[FECHA_ESPERADA]'
+         THEN 'ACCESO_CONCEDIDO' ELSE 'ACCESO_DENEGADO' END AS resultado_validacion
+FROM ventas v
+JOIN detalles_venta dv ON v.id_venta = dv.id_venta
+WHERE v.numero_ticket = '[NUMERO_TICKET]'
+GROUP BY v.id_venta;
