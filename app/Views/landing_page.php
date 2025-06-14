@@ -10,7 +10,7 @@
     <!-- Titulo -->
     <title>SucuAlitas | Los mejores alimentos</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/imagenes/icono.jpg">
+    <link rel="icon" type="image/x-icon" href="<?= base_url('imagenes/iconook.jpg') ?>">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- Iconos de Bootstrap -->
@@ -33,10 +33,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar-toggler">
-            <pre><?= base_url('imagenes/icono.jpg') ?></pre>
-
+            <!-- <pre><?= base_url('imagenes/icono.jpg') ?></pre> -->
           <a class="navbar-brand" href="#">
-            <img src="<?= base_url('imagenes/icono.jpg')?>" width="50" alt="Logo de la página web">
+            <img src="<?= base_url('imagenes/iconook.jpg')?>" width="50" alt="Logo de la página web">
           </a>
           <ul class="navbar-nav d-flex justify-content-center align-items-center">
             <li class="nav-item">
@@ -60,11 +59,10 @@
     </nav>
 
     <!-- Seccion Hero -->
-     <a href="<?= base_url('imagenes/icono.jpg')?>">ir aqui</a>
     <section class="hero align-items-stretch">
       <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
 
-        <img class="hero-imagen-desarrollador" src="<?= base_url('imagenes/icono.jpg')?>" alt="Foto de Alitas">
+        <img class="hero-imagen-desarrollador" src="<?= base_url('imagenes/iconook.jpg')?>" alt="Foto de Alitas">
         <h1>SUCUALITASss</h1>
         <h2>Bienvenidos sean todos y todas, sientanse con total libertad de explorar todo lo que tenemos para ustedes en este sitio web.</h2>
       </div>
@@ -131,7 +129,7 @@
           <!-- Sucursal1 1 -->
           <div class="col-12 col-md-6 col-lg-4">
             <div class="proyecto">
-              <img src="/imagenes/restaurante1.jpg" alt="Proyecto 1">
+              <img src="<?= base_url('imagenes/restaurante1.jpg')?>" alt="Foto de Alitas">
               <div class="overlay">
                 <p>Condesa</p>
                 <div class="iconos-contenedor">
@@ -148,7 +146,7 @@
           <!-- Sucursal 2 -->
           <div class="col-12 col-md-6 col-lg-4">
             <div class="proyecto">
-              <img src="/imagenes/restaurante2.avif" alt="Proyecto 1">
+              <img src="<?= base_url('imagenes/restaurante2.avif')?>" alt="Foto de Alitas">
               <div class="overlay">
                 <p>Insurgentes</p>
                 <div class="iconos-contenedor">
@@ -165,7 +163,7 @@
           <!-- Sucursal 3 -->
           <div class="col-12 col-md-6 col-lg-4">
             <div class="proyecto">
-              <img src="/imagenes/restaurante3.webp" alt="Proyecto 1">
+              <img src="<?= base_url('imagenes/restaurante3.webp')?>" alt="Proyecto 1">
               <div class="overlay">
                 <p>Polanco</p>
                 <div class="iconos-contenedor">
@@ -182,7 +180,7 @@
           <!-- Sucursal 4 -->
           <div class="col-12 col-md-6 col-lg-4">
             <div class="proyecto">
-              <img src="/imagenes/restaurante4.jpg" alt="Proyecto 1">
+              <img src="<?= base_url('imagenes/restaurante4.jpg')?>" alt="Proyecto 1">
               <div class="overlay">
                 <p>Xochimilco</p>
                 <div class="iconos-contenedor">
@@ -199,7 +197,7 @@
           <!-- Proyecto 5 -->
           <div class="col-12 col-md-6 col-lg-4">
             <div class="proyecto">
-              <img src="/imagenes/restaurante5.jpg" alt="Proyecto 1">
+              <img src="<?= base_url('imagenes/restaurante5.jpg')?>" alt="Proyecto 1">
               <div class="overlay">
                 <p>Ermita</p>
                 <div class="iconos-contenedor">
@@ -216,7 +214,7 @@
           <!-- Proyecto 6 -->
           <div class="col-12 col-md-6 col-lg-4">
             <div class="proyecto">
-              <img src="/imagenes/restaurante6.jpg" alt="Proyecto 1">
+              <img src="<?= base_url('imagenes/restaurante6.jpg')?>" alt="Proyecto 1">
               <div class="overlay">
                 <p>Toreo</p>
                 <div class="iconos-contenedor">
@@ -293,7 +291,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="container">
-              <img class="testimonio-imagen rounded-circle" src="/imagenes/cliente1.svg" alt="Foto de Gino">
+              <img class="testimonio-imagen rounded-circle" src="<?= base_url('imagenes/cliente1.svg')?>" alt="Foto de Gino">
               <p class="testimonio-texto">Definitivamente uno de los mejores lugares a los que he ido a comer, el lugar muy limpio, la atención 10/10, y la comida sumamente rica, lo recomiendo ampliamente.</p>
               <div class="testimonio-info">
                 <p class="cliente">instagram</p>
@@ -303,7 +301,7 @@
           </div>
           <div class="carousel-item">
             <div class="container">
-              <img class="testimonio-imagen rounded-circle" src="/imagenes/cliente2.svg" alt="Foto de Nora">
+              <img class="testimonio-imagen rounded-circle" src="<?= base_url('imagenes/cliente2.svg')?>" alt="Foto de Nora">
               <p class="testimonio-texto">Las mejores alitas que he provado muy recomendadas, fui el viernes con unos amigos para ver el futbol y tenían una promoción con bebidas y comida, excelente volveremos a ir!</p>
               <div class="testimonio-info">
                 <p class="cliente">instagram</p>
@@ -313,7 +311,7 @@
           </div>
           <div class="carousel-item">
             <div class="container">
-              <img class="testimonio-imagen rounded-circle" src="/imagenes/cliente3.svg" alt="Foto de Leonardo">
+              <img class="testimonio-imagen rounded-circle" src="<?= base_url('imagenes/cliente3.svg')?>" alt="Foto de Leonardo">
               <p class="testimonio-texto">Excelente opción para una cerveza con amigos
               Varias veces he ido. Limpio, tranquilo, muy buena atención, servicio rápido. La cerveza con clamato, en el tarro de casi 900 ml y pico, muy muy bueno. Las alitas barbecue, son de los más recomendables.
               </p>
@@ -361,7 +359,7 @@
     
     <!-- Pie de pagina (footer) -->
     <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center"> 
-      <img class="footer-logo" src="/imagenes/icono-blanco.svg" alt="Logo del portafolio">
+      <img class="footer-logo" src="<?= base_url('imagenes/icono-blanco.svg')?>" alt="Logo del portafolio">
       <p class="footer-texto text-center">Sigamos creando buenos momentos.<br>Sigamos creando sonrisas.</p>
       <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
         <a href="https://twitter.com/freecodecampES" target="_blank" rel="noopener noreferrer">
