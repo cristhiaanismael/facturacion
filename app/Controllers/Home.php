@@ -9,9 +9,9 @@ class Home extends BaseController
         return view('landing_page');
     }
 
-        public function index2()
+        public function ticket()
     {
-        return view('welcome_message');
+        return view('accessdoor');
     }
  
 }
