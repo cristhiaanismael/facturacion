@@ -44,7 +44,39 @@
 
       <p id="mensaje" class="error"></p>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     
   <script src="../accessdoor/script.js"></script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    //va esperara a ejecutarse hasta que el dom este creado y cargado al 100%
+    $.ajax({
+        url: './sucursal/', // Ajusta esta ruta según tu configuración
+        type: 'GET',
+        dataType: 'json',
+        success: function(response) {
+          console.log(response);
+           
+        },
+        error: function(xhr, status, error) {
+            console.error("Error en la petición AJAX:", error);
+        }
+    });
+
+
+});
+</script>
+
+
+
+
 </body>
 </html>
