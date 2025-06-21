@@ -36,7 +36,9 @@ $routes->set404Override();
 
 //metodo get,post     //ruta que colo el usuaro     //contralador   // metodo
 $routes->get('/', 'Home::index');
-//$routes->get('/prueba', 'Home::index2');
+
+
+$routes->get('/clientes/list', 'Clientes::list');
 
 
 
