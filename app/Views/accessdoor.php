@@ -16,7 +16,7 @@
     <!-- Iconos de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">   
     <!-- CSS -->
-    <link href="<?= base_url('/CSS/stylesaccess.css')?>" rel="stylesheet">
+    <link href="<?= base_url('public/css/stylesaccess.css')?>" rel="stylesheet"> 
 </head>
 <body>
     <img src="<?= base_url('imagenes/iconook.jpg')?>" alt="Logo principal" class="imagen-responsiva">

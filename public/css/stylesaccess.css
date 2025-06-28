@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+  .imagen-responsiva {
+    max-width: 30%;     /* Hace que la imagen nunca exceda el ancho del contenedor */
+    height: auto;        /* Mantiene la proporción */
+    display: block;      /* Elimina el pequeño espacio debajo de la imagen */
+    margin-left: 0;      /* Alinea a la izquierda */
+    right: auto;
+  }
+
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+}
+
+input, button {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: green;
+  border-color: white;
+}
+
+#mensaje {
+  margin-top: 20px;
+  font-weight: bold;
+  color: green;
+}
