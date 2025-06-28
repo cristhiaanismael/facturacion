@@ -65,6 +65,7 @@ $(document).ready(function() {
         success: function(response) {
           console.log(response);
            
+        
         },
         error: function(xhr, status, error) {
             console.error("Error en la petición AJAX:", error);
