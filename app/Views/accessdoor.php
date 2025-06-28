@@ -92,7 +92,7 @@
 
             // Enviar por AJAX
             $.ajax({
-                url: './registrar_ticket', // Reemplaza con tu ruta real
+                url: './verificar_ticket', // Reemplaza con tu ruta real
                 method: 'POST',
                 dataType: 'json',
                 data: {

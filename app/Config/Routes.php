@@ -38,7 +38,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/ticket', 'Home::ticket');
 $routes->get('/sucursal', 'Sucursales::getAll');
-$routes->post('/registrar_ticket', 'ticket::verificarTicket');
+$routes->post('/verificar_ticket', 'Ventas::verificarTicket');
 
 
 

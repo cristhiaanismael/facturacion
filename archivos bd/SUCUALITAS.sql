@@ -158,3 +158,9 @@ INSERT INTO facturas (folio, id_venta, fecha_emision, subtotal, iva, total, uuid
 ('FAC-ALI-2025-007', 8, '2025-06-22 16:15:00', 25.00, 4.00, 29.00, 'g7h8i9j0-k1l2-3456-7890-123456abcdef', 'ALI850101XYZ', 'VALIDA'),
 ('FAC-ALI-2025-008', 9, '2025-06-23 14:35:00', 280.00, 44.80, 324.80, 'h8i9j0k1-l2m3-4567-8901-234567abcdef', 'ALI850101XYZ', 'VALIDA');
 
+
+ALTER TABLE `ventas` 
+DROP COLUMN `fecha`;
+
+ALTER TABLE `sucu_facturacion`.`ventas` 
+ADD COLUMN `fecha` DATE NULL AFTER `total`;
