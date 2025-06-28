@@ -37,8 +37,12 @@ $routes->set404Override();
 //metodo get,post     //ruta que colo el usuaro     //contralador   // metodo
 $routes->get('/', 'Home::index');
 $routes->get('/ticket', 'Home::ticket');
-
 $routes->get('/sucursal', 'Sucursales::getAll');
+$routes->post('/registrar_ticket', 'ticket::verificarTicket');
+
+
+
+
 
 
 

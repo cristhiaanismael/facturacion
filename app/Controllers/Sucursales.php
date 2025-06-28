@@ -12,9 +12,7 @@ class Sucursales extends BaseController
         $listado  = $sucursalM->findAll();
 
         return $this->response->setJSON([
-            
                     'data'   => $listado,
-
                 ]);
      
     }
